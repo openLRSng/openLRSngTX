@@ -943,6 +943,7 @@ design rules under a new name.</description>
 <element name="R7" library="SparkFun-Resistors" package="0402-RES" value="1k" x="2.794" y="30.48" rot="R270"/>
 <element name="U$1" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="" x="43.942" y="18.288" rot="MR0"/>
 <element name="JP5" library="SparkFun-Connectors" package="1X03" value="mode" x="17.526" y="8.128" smashed="yes"/>
+<element name="U$2" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="" x="43.942" y="18.288"/>
 </elements>
 <signals>
 <signal name="GND">

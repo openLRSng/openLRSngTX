@@ -4615,6 +4615,7 @@ distributor RS 112-3794</description>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
+<label x="15.24" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DTR" class="0">
