@@ -4277,6 +4277,10 @@ distributor RS 112-3794</description>
 <text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
 <pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
+<pin name="GND" x="0" y="-5.08" visible="off" length="short" direction="pwr" rot="R90"/>
+<wire x1="-1.905" y1="-2.54" x2="-1.905" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="-2.54" x2="1.905" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.54" x2="1.905" y2="-1.905" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4290,6 +4294,7 @@ distributor RS 112-3794</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2 4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -4351,6 +4356,7 @@ distributor RS 112-3794</description>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD"/>
 <part name="R7" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="1k"/>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M03" device="PTH" value="mode"/>
+<part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -4384,7 +4390,7 @@ distributor RS 112-3794</description>
 <instance part="SUPPLY4" gate="1" x="30.48" y="50.8"/>
 <instance part="C4" gate="G$1" x="25.4" y="66.04" rot="R270"/>
 <instance part="C5" gate="G$1" x="25.4" y="60.96" rot="R270"/>
-<instance part="GND5" gate="1" x="22.86" y="55.88"/>
+<instance part="GND5" gate="1" x="40.64" y="53.34"/>
 <instance part="X1" gate="G$1" x="165.1" y="91.44" rot="MR0"/>
 <instance part="GND6" gate="1" x="162.56" y="81.28"/>
 <instance part="Y1" gate="G$1" x="35.56" y="63.5" rot="R90"/>
@@ -4397,8 +4403,15 @@ distributor RS 112-3794</description>
 <instance part="C8" gate="G$1" x="30.48" y="76.2" rot="R90"/>
 <instance part="GND7" gate="1" x="25.4" y="71.12"/>
 <instance part="S1" gate="G$1" x="106.68" y="86.36"/>
-<instance part="R7" gate="G$1" x="7.62" y="48.26"/>
+<instance part="R7" gate="G$1" x="10.16" y="48.26" smashed="yes">
+<attribute name="NAME" x="6.35" y="44.6786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="11.43" y="44.958" size="1.778" layer="96"/>
+</instance>
 <instance part="JP5" gate="G$1" x="96.52" y="109.22" rot="R270"/>
+<instance part="R8" gate="G$1" x="2.54" y="50.8" smashed="yes">
+<attribute name="NAME" x="-1.27" y="52.2986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="3.81" y="52.578" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4498,10 +4511,14 @@ distributor RS 112-3794</description>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="22.86" y1="58.42" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="55.88" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="55.88" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="66.04" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
 <junction x="22.86" y="60.96"/>
+<pinref part="Y1" gate="G$1" pin="GND"/>
+<wire x1="40.64" y1="55.88" x2="40.64" y2="63.5" width="0.1524" layer="91"/>
+<junction x="40.64" y="55.88"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="2"/>
@@ -4600,6 +4617,11 @@ distributor RS 112-3794</description>
 <wire x1="91.44" y1="68.58" x2="93.98" y2="68.58" width="0.1524" layer="91"/>
 <label x="93.98" y="68.58" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="50.8" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
+<label x="15.24" y="50.8" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="TXD" class="0">
 <segment>
@@ -4614,8 +4636,8 @@ distributor RS 112-3794</description>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="12.7" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
-<label x="15.24" y="48.26" size="1.778" layer="95"/>
+<wire x1="15.24" y1="48.26" x2="17.78" y2="48.26" width="0.1524" layer="91"/>
+<label x="17.78" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -4894,7 +4916,7 @@ distributor RS 112-3794</description>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="JP1" gate="G$1" pin="4"/>
-<wire x1="2.54" y1="48.26" x2="-5.08" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="48.26" x2="-5.08" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -4911,6 +4933,13 @@ distributor RS 112-3794</description>
 <pinref part="JP5" gate="G$1" pin="3"/>
 <wire x1="91.44" y1="86.36" x2="99.06" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="86.36" x2="99.06" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="R8" gate="G$1" pin="1"/>
+<pinref part="JP1" gate="G$1" pin="5"/>
+<wire x1="-2.54" y1="50.8" x2="-5.08" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
