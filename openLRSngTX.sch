@@ -4322,11 +4322,11 @@ distributor RS 112-3794</description>
 <part name="J1" library="SparkFun-Connectors" deviceset="AVR_SPI_PRG_6" device="PTH"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M04" device="PTH" value="I2C"/>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="TRANSISTOR_NPN" device="SOT23-3" value="MMBT2222"/>
-<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="10k"/>
-<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="1k"/>
-<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="1k"/>
-<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="220R"/>
-<part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="220R"/>
+<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10k"/>
+<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1k"/>
+<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1k"/>
+<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="220R"/>
+<part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="220R"/>
 <part name="LED1" library="SparkFun-LED" deviceset="LED" device="3MM" value="RED"/>
 <part name="LED2" library="SparkFun-LED" deviceset="LED" device="3MM" value="GRN"/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -4349,14 +4349,14 @@ distributor RS 112-3794</description>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M03" device="PTH" value="REG"/>
 <part name="C6" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="1uF"/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="100n"/>
-<part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="1k"/>
+<part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1k"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="100n"/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD"/>
-<part name="R7" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="1k"/>
+<part name="R7" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1k"/>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M03" device="PTH" value="mode"/>
-<part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="1k"/>
+<part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -4397,12 +4397,12 @@ distributor RS 112-3794</description>
 <instance part="JP1" gate="G$1" x="-12.7" y="45.72"/>
 <instance part="JP4" gate="G$1" x="-12.7" y="66.04"/>
 <instance part="C6" gate="G$1" x="111.76" y="93.98"/>
-<instance part="C7" gate="G$1" x="104.14" y="93.98"/>
+<instance part="C7" gate="G$1" x="119.38" y="93.98"/>
 <instance part="R6" gate="G$1" x="106.68" y="63.5" rot="R90"/>
 <instance part="SUPPLY5" gate="1" x="106.68" y="71.12"/>
 <instance part="C8" gate="G$1" x="30.48" y="76.2" rot="R90"/>
 <instance part="GND7" gate="1" x="25.4" y="71.12"/>
-<instance part="S1" gate="G$1" x="106.68" y="86.36"/>
+<instance part="S1" gate="G$1" x="106.68" y="91.44"/>
 <instance part="R7" gate="G$1" x="10.16" y="48.26" smashed="yes">
 <attribute name="NAME" x="6.35" y="44.6786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="11.43" y="44.958" size="1.778" layer="96"/>
@@ -4458,12 +4458,10 @@ distributor RS 112-3794</description>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="68.58" x2="111.76" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="111.76" y1="83.82" x2="111.76" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="86.36" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
-<junction x="111.76" y="91.44"/>
+<wire x1="111.76" y1="83.82" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="91.44" x2="119.38" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="S1" gate="G$1" pin="2"/>
-<junction x="111.76" y="86.36"/>
+<junction x="111.76" y="91.44"/>
 <pinref part="JP5" gate="G$1" pin="2"/>
 <wire x1="96.52" y1="101.6" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="83.82" x2="111.76" y2="83.82" width="0.1524" layer="91"/>
@@ -4577,10 +4575,10 @@ distributor RS 112-3794</description>
 <wire x1="127" y1="91.44" x2="129.54" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="99.06" x2="111.76" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="99.06" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
 <junction x="127" y="99.06"/>
-<junction x="111.76" y="99.06"/>
+<junction x="119.38" y="99.06"/>
+<wire x1="119.38" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-5.08" y1="68.58" x2="-2.54" y2="68.58" width="0.1524" layer="91"/>
@@ -4900,7 +4898,6 @@ distributor RS 112-3794</description>
 <net name="N$15" class="0">
 <segment>
 <pinref part="S1" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="86.36" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PC0(ADC0)"/>
 <wire x1="101.6" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
 </segment>
