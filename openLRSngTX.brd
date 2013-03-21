@@ -22,7 +22,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -123,14 +123,14 @@
 <text x="5.08" y="24.384" size="1.016" layer="25">DTR</text>
 <text x="11.176" y="38.354" size="1.016" layer="25">PPM</text>
 <text x="7.62" y="38.354" size="1.016" layer="25">GND</text>
-<text x="5.842" y="33.782" size="1.016" layer="25">VIN</text>
+<text x="6.604" y="35.306" size="1.016" layer="25" rot="R270">VIN</text>
 <text x="2.794" y="38.354" size="1.016" layer="25">TXD</text>
-<text x="11.684" y="33.274" size="1.016" layer="25">VCC</text>
-<text x="8.636" y="33.274" size="1.016" layer="25">GND</text>
+<text x="13.97" y="33.274" size="1.016" layer="25" rot="R90">VCC</text>
+<text x="9.144" y="33.274" size="1.016" layer="25">GND</text>
 <text x="18.034" y="3.556" size="1.016" layer="25" rot="R90">GND</text>
 <text x="20.828" y="3.048" size="1.016" layer="25">SDA</text>
 <text x="25.654" y="7.112" size="1.016" layer="25" rot="R90">SCL</text>
-<text x="29.464" y="7.62" size="1.016" layer="25" rot="R180">VCC</text>
+<text x="29.464" y="8.128" size="1.016" layer="25" rot="R180">VCC</text>
 <text x="9.144" y="10.16" size="1.016" layer="25" rot="R180">VCC</text>
 <text x="9.144" y="3.302" size="1.016" layer="25" rot="R180">MISO</text>
 <text x="10.16" y="12.7" size="1.016" layer="25" rot="R270">MOSI</text>
@@ -713,7 +713,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="ITEADstudio_DRC">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -728,26 +728,28 @@ a wide range of applications. Your particular design
 may have different requirements, so please make the
 necessary adjustments and save your customized
 design rules under a new name.</description>
+<description language="zh">&lt;b&gt;Seeed Studio EAGLE Design Rules&lt;/b&gt;
+</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="8mil"/>
-<param name="mdWirePad" value="8mil"/>
-<param name="mdWireVia" value="8mil"/>
-<param name="mdPadPad" value="8mil"/>
-<param name="mdPadVia" value="8mil"/>
-<param name="mdViaVia" value="8mil"/>
-<param name="mdSmdPad" value="8mil"/>
-<param name="mdSmdVia" value="8mil"/>
-<param name="mdSmdSmd" value="8mil"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
+<param name="mdSmdPad" value="0mil"/>
+<param name="mdSmdVia" value="0mil"/>
+<param name="mdSmdSmd" value="0mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="40mil"/>
-<param name="mdDrill" value="8mil"/>
+<param name="mdCopperDimension" value="10mil"/>
+<param name="mdDrill" value="10mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="10mil"/>
-<param name="msDrill" value="24mil"/>
-<param name="msMicroVia" value="9.99mm"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="12mil"/>
+<param name="msMicroVia" value="12mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -762,9 +764,9 @@ design rules under a new name.</description>
 <param name="rlMaxPadInner" value="20mil"/>
 <param name="rlMinPadBottom" value="10mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="8mil"/>
+<param name="rlMinViaOuter" value="6mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="8mil"/>
+<param name="rlMinViaInner" value="6mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -772,16 +774,16 @@ design rules under a new name.</description>
 <param name="rlMaxMicroViaInner" value="20mil"/>
 <param name="psTop" value="-1"/>
 <param name="psBottom" value="-1"/>
-<param name="psFirst" value="-1"/>
+<param name="psFirst" value="0"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="4mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinStopFrame" value="2mil"/>
+<param name="mlMaxStopFrame" value="2mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="100mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -792,7 +794,7 @@ design rules under a new name.</description>
 <param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
-<param name="checkRestrict" value="1"/>
+<param name="checkRestrict" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -890,8 +892,10 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U1" library="SparkFun-DigitalIC" package="TQFP32-08" value="ATMEGA328P" x="15.875" y="19.05" rot="R270">
+<element name="U1" library="SparkFun-DigitalIC" package="TQFP32-08" value="ATMEGA328P" x="15.875" y="19.05" smashed="yes" rot="R270">
 <attribute name="PROD_ID" value="IC-09069" x="-8.255" y="1.27" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="15.875" y="21.463" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="9.525" y="21.59" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="C1" library="SparkFun-Capacitors" package="0805" value="100n" x="3.175" y="7.62" rot="R270"/>
 <element name="C2" library="SparkFun-Capacitors" package="0805" value="100n" x="15.748" y="33.528" smashed="yes" rot="R90">
@@ -905,17 +909,20 @@ design rules under a new name.</description>
 <element name="Q1" library="SparkFun-DiscreteSemi" package="SOT23-3" value="MMBT2222" x="32.639" y="17.526" rot="R270"/>
 <element name="R1" library="SparkFun-Resistors" package="0805" value="10k" x="26.416" y="14.605"/>
 <element name="R2" library="SparkFun-Resistors" package="0805" value="1k" x="5.842" y="30.48" smashed="yes" rot="R270">
-<attribute name="NAME" x="6.223" y="28.8925" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="6.2865" y="28.321" size="0.4064" layer="27"/>
+<attribute name="NAME" x="5.715" y="28.3845" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="5.7785" y="27.813" size="0.4064" layer="27"/>
 </element>
-<element name="R3" library="SparkFun-Resistors" package="0805" value="1k" x="31.369" y="20.066" rot="R180"/>
+<element name="R3" library="SparkFun-Resistors" package="0805" value="1k" x="31.369" y="20.066" smashed="yes" rot="R180">
+<attribute name="NAME" x="30.861" y="21.5265" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="31.877" y="21.463" size="0.4064" layer="27" rot="R180"/>
+</element>
 <element name="R4" library="SparkFun-Resistors" package="0805" value="220R" x="29.21" y="34.925" smashed="yes">
-<attribute name="NAME" x="30.353" y="34.8615" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="28.6385" y="35.56" size="0.4064" layer="27"/>
+<attribute name="NAME" x="30.861" y="34.6075" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="28.6385" y="35.814" size="0.4064" layer="27"/>
 </element>
 <element name="R5" library="SparkFun-Resistors" package="0805" value="220R" x="26.162" y="34.925" smashed="yes" rot="R180">
 <attribute name="NAME" x="24.511" y="34.9885" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="26.4795" y="36.068" size="0.4064" layer="27" rot="R180"/>
+<attribute name="VALUE" x="26.4795" y="36.322" size="0.4064" layer="27" rot="R180"/>
 </element>
 <element name="LED1" library="SparkFun-LED" package="LED3MM" value="RED" x="29.845" y="31.75" smashed="yes" rot="MR90"/>
 <element name="LED2" library="SparkFun-LED" package="LED3MM" value="GRN" x="25.273" y="31.75" smashed="yes" rot="MR90"/>
@@ -937,26 +944,32 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="44.323" y="26.67" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="44.323" y="26.67" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="Y1" library="crystal_3225" package="CRYSTAL-SMD-5X3" value="16MHz" x="12.827" y="27.94"/>
+<element name="Y1" library="crystal_3225" package="CRYSTAL-SMD-5X3" value="16MHz" x="12.827" y="27.94" smashed="yes">
+<attribute name="NAME" x="10.987" y="29.699" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="10.987" y="25.846" size="0.4064" layer="27"/>
+</element>
 <element name="JP1" library="SparkFun-Connectors" package="1X05" value="IN" x="11.684" y="36.83" smashed="yes" rot="R180"/>
 <element name="JP4" library="SparkFun-Connectors" package="1X03" value="REG" x="8.255" y="31.75" smashed="yes"/>
 <element name="C6" library="SparkFun-Capacitors" package="0805" value="1uF" x="36.83" y="16.383" rot="R270"/>
 <element name="C7" library="SparkFun-Capacitors" package="0805" value="100n" x="36.83" y="20.447" rot="R90"/>
 <element name="R6" library="SparkFun-Resistors" package="0805" value="1k" x="22.86" y="24.638"/>
-<element name="C8" library="SparkFun-Capacitors" package="0805" value="100n" x="15.748" y="12.954" rot="R180"/>
+<element name="C8" library="SparkFun-Capacitors" package="0805" value="100n" x="15.748" y="12.954" smashed="yes" rot="R180">
+<attribute name="NAME" x="18.288" y="13.1445" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="18.796" y="13.843" size="0.4064" layer="27" rot="R180"/>
+</element>
 <element name="S1" library="SparkFun-Electromechanical" package="TACTILE_SWITCH_SMD" value="SWITCH-MOMENTARY-2SMD" x="35.814" y="32.004" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="34.925" y="34.036" size="0.4064" layer="28" rot="MR180"/>
 </element>
 <element name="R7" library="SparkFun-Resistors" package="0805" value="1k" x="2.794" y="30.48" smashed="yes" rot="R270">
-<attribute name="NAME" x="3.683" y="29.2735" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="2.9845" y="28.321" size="0.4064" layer="27"/>
+<attribute name="NAME" x="3.429" y="28.7655" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="2.7305" y="27.813" size="0.4064" layer="27"/>
 </element>
 <element name="U$1" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="" x="43.942" y="18.288" rot="MR0"/>
 <element name="JP5" library="SparkFun-Connectors" package="1X03" value="mode" x="17.526" y="8.89" smashed="yes"/>
 <element name="U$2" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="" x="43.942" y="18.288"/>
 <element name="R8" library="SparkFun-Resistors" package="0805" value="1k" x="4.318" y="30.48" smashed="yes" rot="R270">
-<attribute name="NAME" x="4.191" y="28.8925" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="4.2545" y="28.321" size="0.4064" layer="27"/>
+<attribute name="NAME" x="4.191" y="28.3845" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="4.2545" y="27.813" size="0.4064" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -1035,9 +1048,8 @@ design rules under a new name.</description>
 <contactref element="Y1" pad="4"/>
 <contactref element="Y1" pad="2"/>
 <via x="13.716" y="25.654" extent="1-16" drill="0.6"/>
-<via x="10.922" y="25.4" extent="1-16" drill="0.6"/>
+<via x="11.176" y="25.4" extent="1-16" drill="0.6"/>
 <via x="13.208" y="16.51" extent="1-16" drill="0.6"/>
-<wire x1="17.791" y1="28.702" x2="17.78" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="JP2" pad="4"/>
