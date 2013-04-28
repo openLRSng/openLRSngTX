@@ -7,3 +7,5 @@ Main differences to normal openLRS are
 - few I/O pins available for extra switches
 
 External 3v3-5v power brick is needed
+
+A test sketch to verify the board can be found here https://github.com/kh4/openLRSngTX_tester
